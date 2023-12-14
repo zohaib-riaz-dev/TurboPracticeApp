@@ -1,0 +1,20 @@
+<h1>Pages home</h1>
+<h1>Turbo Example</h1>
+
+<%# <turbo-frame id="frame1" src="/frames/1" data-turbo-frame-eager>
+  <p> id="frame1" src="/frames/1" data-turbo-frame-eager </p>
+</turbo-frame> %>
+
+<%# <turbo-frame id="frame2" src="/frames/2" data-turbo-frame-lazy>
+  <p>id="frame2" src="/frames/2" data-turbo-frame-lazy</p>
+</turbo-frame> %>
+
+<turbo-frame id="dynamic-frame" data-turbo-frame-eager>
+  <p>id="dynamic-frame" data-turbo-frame-eager</p>
+</turbo-frame>
+
+<button data-turbo-frame="dynamic-frame" data-action="turbo:submit-end->frames#loadContent">Load Dynamic Content</button>
+
+<turbo-frame id="lazy-frame" src="/posts" data-turbo-frame-lazy>
+  <p>id="lazy-frame" src="/posts" data-turbo-frame-lazy</p>
+</turbo-frame>
